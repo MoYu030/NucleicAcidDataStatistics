@@ -1,0 +1,67 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:核酸检测数据统计"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:UserControls="clr-namespace:核酸检测数据统计.UserControls" x:Class="核酸检测数据统计.LoginWindow"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Background="Transparent"  
+        AllowsTransparency="True"
+        MouseLeftButtonDown="DragWindow"
+         WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="380" Width="650">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="196"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.RowSpan="4"  CornerRadius="16"   Background="White"  />
+        <Image Source="Resources/main.png" Width="240" Height="160" Margin="0,20,0,0"/>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center"  FontWeight="Bold" Text="学生核酸数据统计系统" FontSize="20" />
+        <Border x:Name="name_box" Grid.Row="2"  CornerRadius="10" Width="200" Height="32" Background="#DEDEDE"  >
+            <TextBox x:Name="name_txt" Width="180" Margin="5" BorderThickness="0" HorizontalAlignment="Center">
+                <TextBox.Resources>
+                    <VisualBrush x:Key="HintText" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Left">
+                        <VisualBrush.Visual>
+                            <TextBlock FontStyle="Italic" Text="请输入用户名"/>
+                        </VisualBrush.Visual>
+                    </VisualBrush>
+                </TextBox.Resources>
+                <TextBox.Style>
+                    <Style TargetType="{x:Type TextBox}">
+                        <Setter Property="Background" Value="#DEDEDE"/>
+                        <Setter Property="TextAlignment" Value="Left"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter Property="Background" Value="{StaticResource HintText}"/>
+                            </Trigger>
+                            <Trigger Property="Text" Value="">
+                                <Setter Property="Background" Value="{StaticResource HintText}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+        </Border>
+        <Button x:Name="start_btn" Grid.Row="3" Width="200" Height="32" VerticalAlignment="Top" Margin="0,4,0,0" Click="start_btn_Click" >
+            <TextBlock Text="开始使用"/>
+        </Button>
+        <UserControls:LoadingCtrl x:Name="load" Visibility="Hidden" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Top" RenderTransformOrigin="0.528,-0.158" Width="228"/>
+        <Button x:Name="close_btn" Margin="0,12,12,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="40" Height="40" Click="close_btn_Click" >
+            <Button.Template>
+                <ControlTemplate>
+                    <Border>
+                        <TextBlock Text="&#xeaf2;" FontFamily="/Resources/#iconfont"  Height="20" Foreground="Black" FontSize="20" FontWeight="Bold" TextAlignment="Center" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>

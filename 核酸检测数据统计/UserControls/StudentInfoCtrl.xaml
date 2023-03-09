@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="核酸检测数据统计.UserControls.StudentInfoCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:核酸检测数据统计.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="56" d:DesignWidth="707">
+    <StackPanel HorizontalAlignment="Left" Margin="4,4,4,4">
+        <Border Grid.ColumnSpan="4" Background="#F0F0F0" Width="343" Height="48" CornerRadius="12">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="52"/>
+                    <ColumnDefinition Width="75"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="/Resources/Icon_Head.png"  Width="32" Height="32" Margin="20,0,0,0" />
+                <TextBlock Grid.Column="1" Text="邬振江" x:Name="stu_Name" FontWeight="Bold" FontSize="16" VerticalAlignment="Center" Margin="12"/>
+                <TextBlock Grid.Column="2" Text="网络1957" x:Name="stu_Class" Foreground="#80000000" FontWeight="Bold" FontSize="14" VerticalAlignment="Center" />
+                <TextBlock Grid.Column="4" Text="已完成" x:Name="stu_Status" Foreground="Green" FontWeight="Bold" FontSize="14" VerticalAlignment="Center"  TextAlignment="Center" />
+            </Grid>
+        </Border>
+    </StackPanel>
+</UserControl>
