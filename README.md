@@ -4,4 +4,4 @@
 ![image](https://github.com/MoYu030/NucleicAcidDataStatistics/blob/main/%E6%A0%B8%E9%85%B8%E6%A3%80%E6%B5%8B%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1/Resources/23424234.jpg)
 # Api的Json格式
 ![image](https://github.com/MoYu030/NucleicAcidDataStatistics/blob/main/%E6%A0%B8%E9%85%B8%E6%A3%80%E6%B5%8B%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1/Resources/092639.png)
-array用于存放已做核酸的学生信息，array2则是存放未做核酸的学生信息
+array用于存放已做核酸的学生信息，array2则是存放未做核酸的学生信息，如果有类似功能需求的，可以借鉴
